@@ -1,0 +1,16 @@
+module.exports = {
+    user: '',
+    password: '',
+    server: '',
+    database: '',
+    stream: true,
+    options: {
+        encrypt: false
+    },
+
+    pool: {
+        max: 10,
+        min: 0,
+        idleTimeoutMillis: 1000
+    }
+}
