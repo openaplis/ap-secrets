@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/openaplis/ap-secrets/issues"
   },
-  "homepage": "https://github.com/openaplis/ap-secrets#readme"
+  "homepage": "https://github.com/openaplis/ap-secrets#readme",
+  "dependencies": {
+    "js-base64": "^2.1.9"
+  }
 }
