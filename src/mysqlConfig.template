@@ -1,0 +1,7 @@
+module.exports = {
+  host     : '10.1.2.26',
+  user     : 'sqldude',
+  password : '123Whatsup',
+  database : 'lis',
+  multipleStatements: true,
+}
