@@ -1,11 +1,11 @@
-const localMSSQLConfig = require('../secrets/mssql-config/mssql-config')
-const clusterMSSQLConfigPath = '/etc/secrets/mssql-config'
+const localMysqlConfig = require('../secrets/mssqlConfig/mssqlConfig')
+const clusterMysqlConfigPath = '/etc/secrets/mssqlConfig'
 
-module.exports.mssqlConfig = (callback) => {
+module.exports.mysqlConfig = (callback) => {
   if(process.env.NODE_ENV.trim() == 'DEV') {
-    callback(null, localMSSQLConfig)
+    callback(null, localMysqlConfig)
   } else if(process.env.NODE_ENV.trim() == 'PROD') {
-    fs.readFile('/etc/secrets/mssql-config', 'utf8', function(err, data) {
+    fs.readFile(clusterMysqlConfigPath, 'utf8', function(err, data) {
         if (err) throw err
         callback(null, JSON.parse(data))
     })
