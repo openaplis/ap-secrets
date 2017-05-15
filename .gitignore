@@ -1,5 +1,5 @@
-#config
-config.env
+#Environment
+.env
 
 # Logs
 logs
