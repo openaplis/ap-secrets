@@ -1,5 +1,6 @@
 'use strict'
 
+const dotnv = require('dotenv').config()
 const path = require('path')
 const secretClient = require('./core/secret-client')
 const secretService = require('./core/secret-service')

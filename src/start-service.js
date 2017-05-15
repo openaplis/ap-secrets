@@ -1,3 +1,7 @@
+'use strict'
+
+require('dotenv').config()
+
 var path = require('path')
 var secretService = require(path.join(__dirname, 'index.js')).secretService
 

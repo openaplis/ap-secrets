@@ -4,6 +4,9 @@ FROM node:boron
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
+# Create the secrets directory
+RUN mkdir -p /usr/src/app/secrets
+
 # Install app dependencies
 COPY package.json /usr/src/app/
 RUN npm install
