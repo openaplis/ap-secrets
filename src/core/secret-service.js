@@ -7,14 +7,6 @@ var server = {};
 
 var mysqlConfig = require(path.join(__dirname, 'mysql-config'))
 
-var secret = {
-  host     : '10.1.2.26',
-  user     : 'sqldude',
-  password : '123Whatsup',
-  database : 'lis',
-  multipleStatements: true,
-}
-
 module.exports = {
 
   start: function (callback) {
@@ -41,13 +33,8 @@ module.exports = {
 
 function getMysqlConfig(call, callback) {
   mysqlConfig.get(function (err, config) {
-    if(err) {
-      console.log(err)
-      callback(err)
-    }
-    else {
-      callback(null, secret)
-    }
+    if(err) return callback(err)
+    callback(null, config)    
   })
 }
 
